@@ -55,7 +55,7 @@ continNameSortElement.addEventListener('click', toggleButtonName);
 continTempSortElement.addEventListener('click', toggleButtonTemp);
 
 async function getData() {
-    const res = await fetch('http://localhost:4000/all-timezone-cities');
+    const res = await fetch('https://sneha096.github.io/snehaweather/all-timezone-cities');
     var data;
     try {
         data = await res.json();
@@ -67,7 +67,7 @@ async function getData() {
 }
 
 async function getSelectedCityTimeZone(selectedCityName) {
-    const res = await fetch(`http://localhost:4000/cityName?city=${selectedCityName}`);
+    const res = await fetch(`https://sneha096.github.io/snehaweather/cityName?city=${selectedCityName}`);
     var selectedCityTimeZone = await res.json();
     var sendData;
     try {
@@ -86,7 +86,7 @@ async function getNextFiveHrData(a) {
         "city_Date_Time_Name": dataForCityName[0],
         "hours": 4
     }
-    const res = await fetch('http://localhost:4000/hourly-forecast', {
+    const res = await fetch('https://sneha096.github.io/snehaweather/hourly-forecast', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
