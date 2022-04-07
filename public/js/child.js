@@ -4,7 +4,7 @@
 });*/
 var weatherResult;
 
-var tz = require('C:/Users/snehalatha/Desktop/child process/timeZone.js');
+var tz = require('https://github.com/sneha096/snehaweather/blob/main/timeZone.js');
 
 process.on('message', (msg)=>{
     if(msg === '/all-timezone-cities'){
